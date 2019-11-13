@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.nio.channels.WritableByteChannel;
+
 @PageObject
 public class LoginPage
 {
@@ -19,12 +21,18 @@ public class LoginPage
     @Autowired
     private DashboardPage dashboardPage;
 
+    @FindBy(className = "card-header")
+    WebElement loginFormHeader;
+
     @FindBy(id = "inputPassword")
     WebElement inputPassword;
 
+    @FindBy(id = "inputEmail")
+    WebElement inputEmail;
+
     public String getLoginFormName()
     {
-        return driver.findElement(By.className("card-header")).getText();
+        return loginFormHeader.getText();
     }
 
     public String getSubmitName()
@@ -54,8 +62,7 @@ public class LoginPage
     }
 
     private LoginPage fillEmail(String email) {
-        driver.findElement(By.id("inputEmail"))
-                .sendKeys(email);
+        inputEmail.sendKeys(email);
         return this;
     }
 
