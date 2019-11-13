@@ -1,7 +1,5 @@
 package cz.upce.webapp.selenium.testframework;
 
-import cz.upce.webapp.selenium.testframework.SeleniumTestCaseContext;
-import cz.upce.webapp.selenium.testframework.SeleniumTestExecutionListener;
 import org.junit.After;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;

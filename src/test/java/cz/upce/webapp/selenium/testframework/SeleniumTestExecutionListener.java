@@ -1,6 +1,5 @@
 package cz.upce.webapp.selenium.testframework;
 
-import org.openqa.selenium.WebDriver;
 import org.springframework.test.context.TestContext;
 import org.springframework.test.context.support.AbstractTestExecutionListener;
 
