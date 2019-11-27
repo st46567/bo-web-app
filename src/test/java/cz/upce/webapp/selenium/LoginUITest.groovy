@@ -27,7 +27,7 @@ public class LoginUITest extends Specification
     @Autowired private Creator creator
 
     @Autowired
-    WebDriver driver;
+    WebDriver driver
 
     def "loginPageCorrectTitle"()
     {
@@ -37,9 +37,9 @@ public class LoginUITest extends Specification
         when:
             loginPage
                     .visit()
-                    .submitLoginForm("tester2@test.cz", "tests")
+                    .submitLoginForm("tester2@test.cz", "test")
 
-            def titleAfterLogin = driver.getTitle();
+            def titleAfterLogin = driver.getTitle()
 
         then:
             dashboardPage.title == titleAfterLogin
